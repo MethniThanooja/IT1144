@@ -1,0 +1,79 @@
+
+.logo{
+	font-weight:bold;
+	font-size:10px;
+	width:100px;
+	height:100px;
+
+}
+
+h2{
+	background-color:
+}
+
+.banner{
+		background-color: #1E3A8A;
+		color: #F9FAFB;
+		text-align:center;
+		padding:15px;
+		font-size:22px;
+		font-weight:bold;
+		
+}
+
+
+.container{
+	max-width:900px;
+	margin:40px auto;
+	padding:0 20px;
+	
+}
+
+.card{
+	background-color:#F9FAFB;
+	border: 2px solid black;
+	border-radius:12px;
+	padding:20px;
+	margin-bottom:35px;
+}
+
+.card h2{
+	background-color:#F9FAFB;
+	color:#1E3A8A ;
+	margin-bottom:15px;
+	font-size:25px;
+}
+
+.card p{
+	font-size:17px;
+	background-color:rgba(255,255,255,0.9);
+}
+
+.btn-container{
+	text-align:center;
+	margin:40px;
+}
+
+.view-gallery-btn{
+	background-color:#1E3A8A;
+	color:white;
+	padding:15px 30px;
+	text-decoration:none;
+	border-radius:10px;
+	font-weight:bold;
+	transition:background:0:35;
+}
+
+.view-gallery-btn:hover{
+	background-color:#75F365;
+}
+.footer{
+	background-color:#1E3A8A;
+	text-align:center;
+	color:#75F365;
+}
+
+.image{	border: 2px solid black;
+	border-radius:12px;
+
+}
