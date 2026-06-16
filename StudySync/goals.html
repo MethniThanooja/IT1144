@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Goal Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+  if (localStorage.getItem("darkMode") === "enabled") {
+      document.body.classList.add("dark-mode");
+  }
+</script>
+
+  <nav class="navbar">
+    <div class="logo">
+	<img src="studysynclogo.webp">
+	</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="planner.html">Planner</a></li>
+      <li><a href="timer.html">Timer</a></li>
+      <li><a href="goals.html">Goals</a></li>
+      <li><a href="settings.html">Settings</a></li>
+    </ul>
+  </nav>
+ <div class="goals-page">
+
+  <div class="goals-header">
+    <h2>Your Goals</h2>
+    <p>
+      Set clear goals, track your progress, and stay committed to your journey.
+      Every goal you add brings you closer to the version of yourself you're building.
+    </p>
+  </div>
+
+  <div class="add-goal-box">
+    <input id="goalInput" type="text" placeholder="Add a new goal..." />
+    <button class="goal-add-btn">Add</button>
+  </div>
+
+  <div class="goals-list" id="goalsList">
+    <!-- Goals will appear here -->
+  </div>
+
+</div>
+
+<footer class="footer">
+  <p>© 2026 StudySync. All rights reserved.</p>
+</footer>
+
+  <script src="js/goals.js"></script>
+</body>
+</html>

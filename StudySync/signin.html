@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+  if (localStorage.getItem("darkMode") === "enabled") {
+      document.body.classList.add("dark-mode");
+  }
+</script>
+
+ <nav class="navbar">
+    <div class="logo">
+	<img src="studysynclogo.webp">
+	</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="planner.html">Planner</a></li>
+      <li><a href="timer.html">Timer</a></li>
+      <li><a href="goals.html">Goals</a></li>
+      <li><a href="settings.html">Settings</a></li>
+    </ul>
+  </nav>
+<div class="signin-page">
+
+  <div class="signin-box">
+    <h2>Sign In</h2>
+
+    <input type="text" id="username" placeholder="Enter username">
+    <input type="password" id="password" placeholder="Enter password">
+
+    <button id="submitBtn">Submit</button>
+  </div>
+
+  <div id="userData" class="user-data"></div>
+
+</div>
+<footer class="footer">
+  <p>© 2026 StudySync. All rights reserved.</p>
+</footer>
+
+ <script src="js/signin.js"></script>
+</body>
+</html>

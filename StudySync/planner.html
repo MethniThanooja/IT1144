@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+  if (localStorage.getItem("darkMode") === "enabled") {
+      document.body.classList.add("dark-mode");
+  }
+</script>
+
+  <nav class="navbar">
+    <div class="logo">
+	<img src="studysynclogo.webp">
+	</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="planner.html">Planner</a></li>
+      <li><a href="timer.html">Timer</a></li>
+      <li><a href="goals.html">Goals</a></li>
+      <li><a href="settings.html">Settings</a></li>
+    </ul>
+  </nav>
+
+<div class="study-planner-intro">
+  <h2 class="planner-title">Study Planner</h2>
+  <p class="planner-paragraph">
+    This is your power zone. Every task you add pushes you one step closer to your goals.
+    Stay sharp, stay hungry, and keep moving forward. Your Study Planner isn’t just a list —
+    it’s your momentum machine. Turn your focus on, crush your tasks, and let every win
+    fuel the next one. You’ve got this.
+  </p>
+</div>
+
+<div class="taskbar-container">
+  <div class="taskbar">
+    <input id="taskInput" type="text" placeholder="Add a new task..." />
+    <button class="add-btn">Add</button>
+  </div>
+</div>
+
+<div class="task-list-container">
+  <ul id="taskList"></ul>
+</div>
+
+
+<footer class="footer">
+  <p>© 2026 StudySync. All rights reserved.</p>
+</footer>
+
+<script src="js/planner.js"></script>
+
+</body>
+</html>

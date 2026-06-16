@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>StudySync</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+  if (localStorage.getItem("darkMode") === "enabled") {
+      document.body.classList.add("dark-mode");
+  }
+</script>
+
+
+  <nav class="navbar">
+    <div class="logo">
+	<img src="studysynclogo.webp">
+	</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="planner.html">Planner</a></li>
+      <li><a href="timer.html">Timer</a></li>
+      <li><a href="goals.html">Goals</a></li>
+      <li><a href="settings.html">Settings</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-box">
+  <div class="typing-effect">
+    <h1>Welcome to StudySync</h1>
+	</div>
+    <p>Your all in one student productivity hub.</p><br>
+    <a href="planner.html"><button>Get Started</button></a>
+	
+	<!-- Image Cards Section -->
+<div class="image-cards">
+    <div class="card"><img src="image1.webp" alt="image1"></div>
+    <div class="card"><img src="image2.jpg" alt="image2"></div>
+    <div class="card"><img src="image3.jpg" alt="image3"></div>
+    <div class="card"><img src="image4.jpg" alt="image4"></div>
+</div>
+
+
+  </div>
+  <div class="home-signin">
+  <button class="signin-btn" onclick="window.location.href='signin.html'">
+    Sign In
+  </button>
+</div>
+
+<footer class="footer">
+  <p>© 2026 StudySync. All rights reserved.</p>
+</footer>
+
+
+</body>
+</html>

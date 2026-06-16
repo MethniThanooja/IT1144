@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+	<img src="studysynclogo.webp">
+	</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="planner.html">Planner</a></li>
+      <li><a href="timer.html">Timer</a></li>
+      <li><a href="goals.html">Goals</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="settings.html">Settings</a></li>
+    </ul>
+  </nav>
+<div class="page-box">
+
+  <!-- Header -->
+  <div class="dashboard-header">
+    <h2>Dashboard</h2>
+    <p>
+      A quick overview of your progress. Track your tasks, goals, and study time all in one place.
+      Stay consistent and keep moving forward.
+    </p>
+  </div>
+
+  <!-- Stats Grid -->
+  <div class="stats-grid">
+
+    <div class="stat-card">
+      <h3>Tasks Completed</h3>
+      <p id="tasksCompleted">0</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>Goals Achieved</h3>
+      <p id="goalsAchieved">0</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>Focus Minutes</h3>
+      <p id="focusMinutes">0</p>
+    </div>
+
+  </div>
+
+  <!-- Recent Activity -->
+  <div class="recent-activity">
+    <h3>Recent Activity</h3>
+    <ul id="activityList">
+      <!-- JS will add items here -->
+    </ul>
+  </div>
+
+</div>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Settings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+  if (localStorage.getItem("darkMode") === "enabled") {
+      document.body.classList.add("dark-mode");
+  }
+</script>
+
+  <nav class="navbar">
+    <div class="logo">
+	<img src="studysynclogo.webp">
+	</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="planner.html">Planner</a></li>
+      <li><a href="timer.html">Timer</a></li>
+      <li><a href="goals.html">Goals</a></li>
+      <li><a href="settings.html">Settings</a></li>
+    </ul>
+  </nav>
+<div class="settings-page">
+
+  <div class="settings-header">
+    <h2>Settings</h2>
+    <p>Customize your StudySync experience. Adjust appearance, preferences, and behavior.</p>
+  </div>
+
+  <!-- Appearance Section -->
+  <div class="settings-section">
+    <h3>Appearance</h3>
+
+    <div class="setting-item">
+      <label>Dark Mode</label>
+      <input type="checkbox" id="darkModeToggle">
+    </div>
+
+    <div class="setting-item">
+      <label>Font Size</label>
+      <select id="fontSizeSelect">
+        <option value="small">Small</option>
+        <option value="medium" selected>Medium</option>
+        <option value="large">Large</option>
+      </select>
+    </div>
+
+
+
+  <!-- Reset Section -->
+  <div class="settings-section">
+    <h3>Reset</h3>
+
+    <div class="setting-item">
+      <label>Reset All Settings</label>
+      <button class="reset-btn">Reset</button>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+<div class="footer">
+  <p>© 2026 StudySync. All rights reserved.</p>
+</footer>
+
+
+  <script src="js/settings.js"></script>
+</body>
+</html>

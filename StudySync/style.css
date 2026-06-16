@@ -1,0 +1,752 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+
+
+/*Color Theme-uses to store colors as global variable and uses any where at webpage*/
+:root {
+  --bg: #f7f7ff;        /* Soft white */
+  --text: #ff6ec7;      /* neon pink */
+  --accent: #8a2be2;    /* Holographic purple */
+  --accent2: #00c6ff;   /* Electric blue */
+  --accent3: #ff6ec7;   /* Neon pink */
+  --accent4: #7df9ff;   /* Laser cyan */
+  --card: #ffffff;      /* Clean white card */
+  --shadow: rgba(0, 0, 0, 0.1);
+  --radius: 14px;
+}
+
+
+/* Home page->Base */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: 0.3s ease;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: var(--accent2);
+  transform: scale(1.05);
+}
+
+/*Dark Mode*/
+
+body.dark-mode {
+  background: #2d2b3f; /*purple*/
+  color: #f5f6fa;		/*white*/
+}
+
+body.dark-mode .navbar {
+  background: #3a3750; /*dark purple*/
+}
+
+body.dark-mode button {
+  background: #6c5ce7;/*violet*/
+}
+
+body.dark-mode #taskList li {
+  background: #574f7d;	/*indigo gray*/
+  color: white;
+}
+
+/*Navigation Bar*/
+
+.navbar {
+  background: var(--card);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px var(--shadow);
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.page-box {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex:1;
+}
+
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--accent);
+}
+
+.page-box h1{
+	 color:#8a2be2;
+} 
+	
+.page-box p{
+	color: #8a2be2;
+	
+
+}
+
+	/* Home->Typing animation */
+.typing-effect h1 {
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  animation: typing 3s steps(30, end);
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+/*Adding cards*/
+.image-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin: 60px 0;
+  flex-wrap: nowrap;   /* THIS forces one row */
+  overflow-x: auto;    /* prevents breaking on small screens */
+  padding-bottom: 10px;
+}
+
+.image-cards .card {
+  min-width: 180px;
+  height: 220px;
+  background: var(--card);
+  border-radius: 16px;
+  overflow: hidden;  /*excess image will cut off//without this image will spill outside*/
+  box-shadow: 0 0 20px rgba(0,255,255,0.15);   /*00 no offset, blur,color with opacity*/
+  transition: transform 0.3s ease;
+}
+
+.image-cards .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-cards .card:hover {
+  transform: scale(1.08);
+}
+
+.home-signin {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.signin-btn {
+  padding: 14px 28px;
+  background: #3b82f6;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition:  transform 0.25s ease;
+}
+
+.signin-btn:hover {
+  background: #60a5fa;
+  transform:transform 0.3s ease;
+}
+/*signin Page*/
+.signin-page {
+  width: 100%;
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.signin-box {
+  background: #1e1f24;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.signin-box h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.signin-box input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: #141416;
+  color: #e5e7eb;
+  font-size: 1rem;
+}
+
+.signin-box input:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
+#submitBtn {
+  padding: 12px;
+  background: #3b82f6;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+#submitBtn:hover {
+  background: #60a5fa;
+  transform: translateY(-2px);
+}
+
+.user-data {
+  margin-top: 20px;
+  background: #2a2b31;
+  padding: 20px;
+  border-radius: 14px;
+  color: #e5e7eb;
+  border: 1px solid rgba(255,255,255,0.08);
+  display: none;
+}
+
+
+/* --- Planner Intro Card --- */
+.study-planner-intro {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 22px 26px;
+  border-radius: 14px;
+  background: #1e1f24; /* soft charcoal */
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #e5e7eb; /* soft white */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  flex:1;
+}
+
+.planner-title {
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.planner-paragraph {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #d1d5db;
+}
+
+/* --- Taskbar --- */
+.taskbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.taskbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #2a2b31; /* deep graphite */
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  width: 90%;
+  max-width: 650px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+#taskInput {
+  flex: 1;
+  padding: 12px 16px;
+  background: #141416; /* clean dark */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  color: #e5e7eb;
+  font-size: 1rem;
+  transition: 0.25s ease;
+}
+
+#taskInput:focus {
+  border-color: #3b82f6; /* calm blue */
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+  outline: none;
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  width: 90%;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#taskList li {
+  background: #1e1f24;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #e5e7eb;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+#taskList li:hover {
+  background: #2a2b31;
+  transform: translateY(-2px);
+}
+
+.add-btn {
+  padding: 12px 20px;
+  background: #3b82f6; /* calm blue */
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.add-btn:hover {
+  background: #60a5fa; /* lighter blue */
+  transform: translateY(-2px);
+}
+
+
+.add-btn {
+  padding: 12px 20px;
+  background: #3b82f6; /* calm blue */
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.add-btn:hover {
+  background: #60a5fa;  /*lighter blue*/
+  transform: translateY(-2px);
+}
+
+
+.add-btn {
+  background: linear-gradient(135deg, #00f5ff, #ff00e6);
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.add-btn:hover {
+  transform: scale(1.08);
+  box-shadow:none;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.section-title {
+  color: var(--accent);
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px var(--shadow);
+  margin-bottom: 20px;
+}
+
+.spacer {
+  height: 25px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: var(--accent2);
+  filter: blur(120px);
+  top: -50px;
+  right: -50px;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+
+
+
+/*Timer Page*/
+
+/* --- Whole Timer Page Layout --- */
+.timer-page {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex:1;
+}
+
+/* --- Header Section --- */
+.timer-header {
+  background: #1e1f24;
+  padding: 24px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.timer-header h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+.timer-header p {
+  margin: 0;
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+/* --- Timer Core Box --- */
+
+.timer-core {
+  background: #ffffff; /* white background */
+  padding: 40px 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+
+/* --- Time Display --- */
+#timeDisplay {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color:#1e1f24;
+  margin-bottom: 25px;
+}
+
+/* --- Buttons --- */
+.timer-controls {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.tbtn {
+  padding: 12px 22px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+  color: white;
+}
+
+.start {
+  background: #3b82f6;
+}
+
+.start:hover {
+  background: #60a5fa;
+}
+
+.pause {
+  background: #64748b;
+}
+
+.pause:hover {
+  background: #7b8ba4;
+}
+
+.reset {
+  background: #ef4444;
+}
+
+.reset:hover {
+  background: #f87171;
+}
+
+
+/*Goals Page*/
+
+/* --- Page Layout --- */
+.goals-page {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex:1;
+}
+
+/* --- Header Card --- */
+.goals-header {
+  background: #1e1f24;
+  padding: 24px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.goals-header h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+.goals-header p {
+  margin: 0;
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+/* --- Add Goal Bar --- */
+.add-goal-box {
+  display: flex;
+  gap: 12px;
+  background: #2a2b31;
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+#goalInput {
+  flex: 1;
+  padding: 12px 16px;
+  background: #141416;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  color: #e5e7eb;
+  font-size: 1rem;
+  transition: 0.25s ease;
+}
+
+#goalInput:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 8px rgba(59,130,246,0.4);
+  outline: none;
+}
+
+.goal-add-btn {
+  padding: 12px 20px;
+  background: #3b82f6;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.goal-add-btn:hover {
+  background: #60a5fa;
+  transform: translateY(-2px);
+}
+
+/* --- Goals List --- */
+.goals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* --- Individual Goal Card --- */
+.goal-item {
+  background: #1e1f24;
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.goal-text {
+  font-size: 1rem;
+}
+
+.delete-goal {
+  background: #ef4444;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.delete-goal:hover {
+  background: #f87171;
+}
+
+
+
+
+/*Settings Page*/
+/* --- Page Layout --- */
+.settings-page {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* --- Header Card --- */
+.settings-header {
+  background: #1e1f24;
+  padding: 24px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.settings-header h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+.settings-header p {
+  margin: 0;
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+/* --- Settings Sections --- */
+.settings-section {
+  background: #2a2b31;
+  padding: 24px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.settings-section h3 {
+  margin-bottom: 16px;
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+/* --- Individual Setting Item --- */
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e1f24;
+  padding: 14px 16px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.setting-item label {
+  color: #e5e7eb;
+  font-size: 1rem;
+}
+
+
+
+/* Reset Button */
+.reset-btn {
+  padding: 10px 18px;
+  background: #ef4444;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.reset-btn:hover {
+  background: #f87171;
+  transform: translateY(-2px);
+}
+
+
+
+.footer {
+  background: #1e1f24; /* black background */
+  color: #d1d5db;      /* soft gray text */
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.95rem;
+}

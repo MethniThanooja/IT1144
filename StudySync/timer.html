@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+  if (localStorage.getItem("darkMode") === "enabled") {
+      document.body.classList.add("dark-mode");
+  }
+</script>
+
+  <nav class="navbar">
+    <div class="logo">
+	<img src="studysynclogo.webp">
+	</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="planner.html">Planner</a></li>
+      <li><a href="timer.html">Timer</a></li>
+      <li><a href="goals.html">Goals</a></li>
+      <li><a href="settings.html">Settings</a></li>
+    </ul>
+  </nav>
+<div class="timer-page">
+<div class="timer-header">
+  <h2>Focus Timer</h2>
+  <p>
+    Time is the quiet force that shapes everything you become. Every minute you choose to
+    focus is a minute invested in your future self. This timer isn’t just counting down —
+    it’s helping you build discipline, momentum, and clarity. When you press start, you’re
+    choosing progress over distraction, growth over comfort, and purpose over noise. Stay
+    steady, breathe, and let each second guide you forward. Small steps become big wins,
+    and every focused moment brings you closer to the life you’re working for.
+  </p>
+</div>
+</div>
+
+<div class="timer-core">
+  <div id="timeDisplay">25:00</div>
+  <div class="timer-controls">
+    <button class="tbtn start">Start</button>
+    <button class="tbtn pause">Pause</button>
+    <button class="tbtn reset">Reset</button>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>© 2026 StudySync. All rights reserved.</p>
+</footer>
+
+  <script src="js/timer.js"></script>
+</body>
+</html>
