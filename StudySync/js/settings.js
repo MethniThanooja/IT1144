@@ -23,9 +23,9 @@ fontSizeSelect.addEventListener("change", () => {
     if (size === "small") {
         document.body.style.fontSize = "14px";
     } else if (size === "medium") {
-        document.body.style.fontSize = "16px";
-    } else if (size === "large") {
         document.body.style.fontSize = "18px";
+    } else if (size === "large") {
+        document.body.style.fontSize = "22px";
     }
 });
 

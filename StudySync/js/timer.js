@@ -1,9 +1,9 @@
 let time = 25 * 60; // 25 minutes in seconds
-let timerInterval = null;
-let isRunning = false;
+let timerInterval = null;  //pause
+let isRunning = false;		//prevent timer running twice at once
 
 const timeDisplay = document.getElementById("timeDisplay");
-const startBtn = document.querySelector(".start");
+const startBtn = document.querySelector(".start");  //select element with css
 const pauseBtn = document.querySelector(".pause");
 const resetBtn = document.querySelector(".reset");
 
@@ -13,7 +13,7 @@ function updateDisplay() {
   let seconds = time % 60;
 
   timeDisplay.textContent =
-    `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+    `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;//0=>05  =>$use to insert variable into strings
 }
 
 // Start Timer
